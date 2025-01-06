@@ -63,8 +63,11 @@ class DropdownItemDecoration {
     this.selectedTextColor,
     this.textColor,
     this.disabledTextColor,
-    this.selectedIcon = const Icon(Icons.check),
+    this.selectedIcon,
     this.disabledIcon,
+    this.isShowPrefixIcon = true,
+    this.prefixIconSelected,
+    this.prefixIconUnSelected,
   });
 
   /// The background color of the dropdown item.
@@ -90,6 +93,15 @@ class DropdownItemDecoration {
 
   /// The icon to display for the disabled dropdown item.
   final Icon? disabledIcon;
+
+  /// The prefix icon to display for the dropdown item.
+  final Icon? prefixIconSelected;
+
+  /// The prefix icon to display for the dropdown item.
+  final Icon? prefixIconUnSelected;
+
+  /// The prefix icon to display for the dropdown item.
+  final bool isShowPrefixIcon;
 }
 
 /// Represents the decoration for the dropdown.

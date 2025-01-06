@@ -155,9 +155,16 @@ class _Dropdown<T> extends StatelessWidget {
             ? dropdownItemDecoration.selectedIcon
             : null;
 
+    final prefixIcon = !dropdownItemDecoration.isShowPrefixIcon
+        ? null
+        : option.selected
+            ? dropdownItemDecoration.prefixIconSelected
+            : dropdownItemDecoration.prefixIconUnSelected;
+
     return Ink(
       child: ListTile(
         title: Text(option.label),
+        leading: prefixIcon,
         trailing: trailing,
         dense: true,
         autofocus: true,

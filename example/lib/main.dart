@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         items: items,
                         controller: controller,
                         enabled: true,
-                        searchEnabled: true,
+                        // searchEnabled: true,
                         chipDecoration: const ChipDecoration(
                           backgroundColor: Colors.yellow,
                           wrap: true,
@@ -117,23 +117,29 @@ class _MyHomePageState extends State<MyHomePage> {
                         dropdownDecoration: const DropdownDecoration(
                           marginTop: 2,
                           maxHeight: 500,
-                          header: Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Text(
-                              'Select countries from the list',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
+                          // header: Padding(
+                          //   padding: EdgeInsets.all(8),
+                          //   child: Text(
+                          //     'Select countries from the list',
+                          //     textAlign: TextAlign.start,
+                          //     style: TextStyle(
+                          //       fontSize: 16,
+                          //       fontWeight: FontWeight.bold,
+                          //     ),
+                          //   ),
+                          // ),
                         ),
                         dropdownItemDecoration: DropdownItemDecoration(
-                          selectedIcon:
-                              const Icon(Icons.check_box, color: Colors.green),
+                          // selectedIcon:
+                          //     const Icon(Icons.check_box, color: Colors.green),
                           disabledIcon:
                               Icon(Icons.lock, color: Colors.grey.shade300),
+                          prefixIconSelected: const Icon(
+                            Icons.check_box_rounded,
+                          ),
+                          prefixIconUnSelected: const Icon(
+                            Icons.check_box_outline_blank,
+                          )
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
