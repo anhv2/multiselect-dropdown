@@ -7,10 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 part 'controllers/future_controller.dart';
+
 part 'controllers/multiselect_controller.dart';
+
 part 'enum/enums.dart';
+
 part 'models/decoration.dart';
+
 part 'models/dropdown_item.dart';
+
 // part 'models/network_request.dart';
 part 'widgets/dropdown.dart';
 
@@ -634,7 +639,7 @@ class _MultiDropdownState<T extends Object> extends State<MultiDropdown<T>> {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(option.label, style: chipDecoration.labelStyle),
+          Flexible(child: Text(option.label, style: chipDecoration.labelStyle)),
           const SizedBox(width: 4),
           InkWell(
             onTap: () {
